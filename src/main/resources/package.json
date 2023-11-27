@@ -1,0 +1,28 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@types/langdetect": "^0.2.2",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "svelte": "^4.2.3",
+    "tailwindcss": "^3.3.5",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.2",
+    "langdetect": "^0.2.1",
+    "svelte-routing": "^2.9.0",
+    "uuid": "^9.0.1"
+  }
+}
