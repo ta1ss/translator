@@ -6,13 +6,16 @@ RUN npm run build
 
 FROM maven:latest AS backend-builder
 WORKDIR /app
-COPY . .
+COPY pom.xml .
+COPY src ./src
+COPY --from=frontend-builder /app/dist ./src/main/resources/static
+
 RUN mvn clean package -DskipTests
 
 FROM openjdk:latest
 WORKDIR /app
 COPY --from=backend-builder /app/target/translator-0.0.1-SNAPSHOT.jar /app/translator.jar
-COPY --from=frontend-builder /app/dist /app/dist
-EXPOSE 8080 5173
+EXPOSE 8080
 
 CMD ["java", "-jar", "translator.jar"]
+
