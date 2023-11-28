@@ -9,10 +9,7 @@ Simple translator app using Java17 (Spring Boot), Vite + Svelte and MongoDB Atla
 ### Usage
 
 ```bash
-$ git clone https://github.com/ta1ss/translator.git
-$ cd translator/
-$ docker compose up
+$ docker pull viktorvt/translator
+$ docker run -p 8080:8080 viktorvt/translator:latest 
 ```
-- access the app on -->>  http://localhost:5173/
-
-Beware, currently using heavyweight build images. 
+- access the app on -->>  http://localhost:8080/
