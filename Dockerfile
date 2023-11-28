@@ -9,7 +9,6 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 COPY --from=frontend-builder /app/dist ./src/main/resources/static
-
 RUN mvn clean package -DskipTests
 
 FROM openjdk:latest
